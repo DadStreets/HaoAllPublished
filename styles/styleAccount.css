@@ -1,0 +1,207 @@
+@keyframes emersionList {
+	from {
+		max-height: 0;
+	} to {
+		max-height: 50vh;
+	}
+}
+
+@keyframes moveCloseBtn {
+	from {
+		bottom: -80px;
+	} to {
+		bottom: 80px;
+	}
+}
+
+.wrapper__inner {
+	max-width: 300px;
+}
+
+.user-box {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	max-width: inherit;
+}
+
+.user-avatar {
+	background: orange;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin-right: 10px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.user-avatar .fa-user {
+	line-height: 120px;
+	font-size: 70px;
+}
+
+.user-name {
+	font-size: 20pt;
+	margin: 15px 0;
+	line-height: 1;
+}
+
+.user-coins {
+	font-size: 18pt;
+	font-weight: 500;
+	line-height: 1;
+	color: #D9B916;
+}
+
+.followers-list.open,
+.subscribes-list.open {
+	animation: emersionList .5s forwards; 
+}
+
+.followers-list,
+.subscribes-list {
+	transition: all .8s;
+	list-style: none;
+	background: #CD8C14;
+	position: fixed;
+	width: 100%;
+	max-width: inherit;
+	z-index: 200;
+	height: 50vh;
+	overflow: auto;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+.followers__list-item {
+	width: 100%;
+	padding: 10px;
+	text-align: left;
+	border-bottom: 2px solid #222;
+}
+
+.followers__list-item .fa-user {
+	background: #fff;
+	border-radius: 50%;
+	padding: 10px;
+	margin-right: 15px;
+}
+
+.subscribes__list-item {
+	text-align: left;
+	padding: 10px;
+	width: 100%;
+	border-bottom: 2px solid #222;
+}
+
+.subscribes__list-item .fa-user {
+	padding: 10px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: #222;
+	color: #fff;
+}
+
+.publication-line {
+	text-align: center;
+	font-size: 14pt;
+	margin-bottom: 30px;
+}
+
+.publication-num {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+#closeListButton {
+	background: #f8f8f8;
+	bottom: 80px;
+	border: 2px solid #222;
+	border-radius: 50%;
+	cursor: pointer;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .5s;
+	outline: none;
+	height: 50px;
+	width: 50px;
+	z-index: 90;
+}
+
+#closeListButton.active {
+	animation: moveCloseBtn .5s forwards; 
+}
+
+#closeListButton i {
+	font-size: 28px;
+}
+
+.about-user {
+	display: flex;
+	flex-basis: 150px;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.about-followers,
+.about-subscribes {
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.followers-line {
+	font-size: 14pt; 
+	color: #262626;
+	display: block;
+}
+
+.subscribes-num,
+.followers-num {
+	font-size: 18px;
+	font-weight: 500;
+	color: #000;
+}
+
+
+/*  Libs Post-Box Style */
+.post {
+	margin-bottom: 40px;
+	box-shadow: 0 0 5px rgba(0,0,0,.15),
+				0 0 15px rgba(0,0,0,.25);
+}
+
+.post-image {
+	width: 100%;
+	display: block;
+}
+
+.post-subline {
+	display: flex;
+	list-style: none;
+	justify-content: flex-start;
+	background: #fff;
+	height: 50px;
+	padding: 0 10px;
+}
+
+.post-subline > li {
+	margin: 0 8px;
+	line-height: 50px;
+}
+
+.post-subline-button {
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.post-subline-button i {
+	font-size: 24px;
+}
